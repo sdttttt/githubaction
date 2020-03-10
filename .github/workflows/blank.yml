@@ -33,6 +33,8 @@ jobs:
         echo test, and deploy your project.
     - name: Upload To Github Release
       uses: xresloader/upload-to-github-release@v1.1.1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         # The files or file patterns to upload. You can upload multiple files by split them by semicolon. You can use the glob pattern to find the files.
         file: README.md
